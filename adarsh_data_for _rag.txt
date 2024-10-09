@@ -1,0 +1,14 @@
+["hi i am adarsh and i live  in india. ",
+"I lives in banglore ",
+"i work for a company with my seniors .",
+"my team is like nikil is my yeam lead, anita is reporting to nikhil and  nikhil reports to gautam",
+"i have more firends like arun , aman , atul and jayesh i my team. ",
+"from other team i have friednds like akash abhi anvith. anvith is very jolly person supporting abhi too.",
+"akash like doing body building",
+"one of my frind more mentor is prithvi bhaiya, he always supports me and guide me on mistakes. ",
+"dileswar and other team leads also help me to learn a lot.",
+
+"from testing team i have friends lime chandraika , vana and saisudha. sai sudha is also very jolly girl, ",
+"she alsways smile even in pressure",
+"people call my team as ai-ml team. i am very happy to join this team under leadership of my team lead cum main boss mr.nikhil.",
+"thank you."]
