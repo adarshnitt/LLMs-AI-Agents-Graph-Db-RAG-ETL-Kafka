@@ -11,7 +11,7 @@ from langchain_huggingface import HuggingFaceEndpoint,ChatHuggingFace
 from huggingface_hub import login
 import os
 from openai import OpenAI
-
+# give hugging fce tokens : os.environ["token name something]
 
 
 class State(TypedDict):
