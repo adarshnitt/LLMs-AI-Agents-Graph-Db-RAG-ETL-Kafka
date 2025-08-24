@@ -1,7 +1,7 @@
 # Large Language Model Artificial Intelligence Agents Graph-Db  RAG(Vectorize/Graph)
 
 <p align="center">
-  <img src="https://github.com/adarshnitt/LLMs-AI-Agents-Graph-Db-RAG/blob/main/Screenshot%20(6).png" alt="GitHub Logo" width="100"/>
+  <img src="https://github.com/adarshnitt/LLMs-AI-Agents-Graph-Db-RAG/blob/main/Screenshot%20(6).png" alt="GitHub Logo" width="200"/>
 </p>
 
-<img src="assets/another_image.jpg" alt="Description" style="width:50%; display:block; margin:auto;"/>
+<img src="assets/another_image.jpg" alt="Description" style="width:200%; display:block; margin:auto;"/>
