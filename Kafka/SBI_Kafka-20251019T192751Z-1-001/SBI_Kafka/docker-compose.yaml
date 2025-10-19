@@ -1,0 +1,38 @@
+services:
+  broker: # service name
+    image: confluentinc/cp-kafka:7.8.3
+    container_name: kafka # container name
+
+
+    # port will connect my local env to connect with docker container inside, RUNTIME Scenerio
+    ports:  # host:container
+      - "9092:9092" # map local_post:container_port_insdode_docker
+      - "9093:9093"
+    environment:
+      KAFKA_KRAFT_MODE: 'true' # instead zooperkepier , kraft mode will use one of broker to act as controller to amage all topic, patrtion, broker dead/alive
+      KAFKA_NODE_ID: 1 #broker id
+      CLUSTER_ID: 'adarsh-kafka-cluser-id0'
+
+      KAFKA_PROCESS_ROLES: broker,controller # kraft mode, a ndoe, cpuld play both controller and broker role
+      
+      #plaintext means no encryption, controller use 9093 for inter broker communication
+      KAFKA_LISTENERS:  PLAINTEXT://0.0.0.0:9092,CONTROLLER://localhost:9093  #address where kafka is running(kafka runs in side container)
+      
+      # advertise meqaning, kafka is advertising that extrenal prodcuwr/conumer connect with me on this addres: PLAINTEXT://172.26.80.1:9092  bcz kafka is running on cntainer and through this container and localcomputer where producer is present will inyerst
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://192.168.1.75:9092 # runtime : 172.26.80.1 ,address to connect kafka broker with runtime, to connect priducer/consumer file
+
+      KAFKA_CONTROLLER_LISTENER_NAMES: CONTROLLER
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT
+      KAFKA_CONTROLLER_QUORUM_VOTERS: 1@localhost:9093 # who will vote on importnat cluster decision
+
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1 # only one broker will hold that data as replication, one broker could hold many partion as leader and folowerrs
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
+      KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
+      KAFKA_NUM_PARTITIONS: 3
+      KAFKA_LOG_DIRS: /tmp/kraft-combined-logs
+    volumes:
+      - kafka_kraft:/var/lib/broker/data
+volumes:
+  kafka_kraft:
+
