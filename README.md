@@ -9,3 +9,7 @@
 <p align="center">
   <img src="https://github.com/adarshnitt/LLMs-AI-Agents-Graph-Db-RAG-ETL-Kafka/blob/main/PySpark/image.png" alt="GitHub Logo" width="1000"/>
 </p>
+<p align="center">
+  <img src="https://github.com/adarshnitt/LLMs-AI-Agents-Graph-Db-RAG-ETL-Kafka/blob/main/AI-Agents/image.png" alt="GitHub Logo" width="1000"/>
+</p>
+<br>
